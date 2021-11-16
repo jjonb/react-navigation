@@ -19,14 +19,7 @@ function JesseScreen({ navigation }) {
       />
       <View>
         <Text>
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+         alaal
         </Text>
       </View>
       <TouchableOpacity
