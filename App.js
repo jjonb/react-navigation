@@ -1,65 +1,216 @@
 import React, { useState } from "react";
-import { Button, View, Text } from "react-native";
+import {
+  Button,
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+function JesseScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Image
+        style={styles.profilePic}
+        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+      />
+      <View>
+        <Text>
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+        </Text>
+      </View>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={styles.button}
+      >
+        <Text>Go back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
 
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
+      <TouchableOpacity
+        style={styles.button}
         onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate("Details", {
-            itemId: 0,
-            otherParam: "Originally passed Param",
-          });
+          navigation.navigate("Jesse");
         }}
-      />
+      >
+        <Text>Jesse</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text>Sergut</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text>Linda</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text>Amel</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
-function DetailsScreen({ route, navigation }) {
-  const { itemId, otherParam } = route.params; // Get the params.
-  const [paramsChange, setParamButton] = useState(false);
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Details Screen</Text>
-      <Text>itemId: {JSON.stringify(itemId)}</Text>
-      <Text>otherParam: {JSON.stringify(otherParam)}</Text>
-      <Button
-        title={"Change the Params"}
-        onPress={() => {
-          setParamButton(!paramsChange);
-          navigation.setParams({
-            itemId: paramsChange ? 100 : 0,
-            otherParam: paramsChange
-              ? "Changed Param"
-              : "Originally passed Param",
-          });
-        }}
-      />
-      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen
+          name="Jesse"
+          component={JesseScreen}
+          options={{
+            title: "Jesse",
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: "red",
+    margin: 5,
+    padding: 5,
+    //borderRadius: 50,
+  },
+  profilePic: { width: 100, height: 100 },
+  bioText: {},
+});
+
 export default App;
+
+// function HomeScreen({ navigation }) {
+//   return (
+//     <View
+//       style={{
+//         flex: 1,
+//         alignItems: "center",
+//         justifyContent: "center",
+//         backgroundColor: "grey",
+//       }}
+//     >
+//       <Text style={{ color: "white", fontSize: 20 }}>Home Screen</Text>
+//       <Button
+//         title="Go to Second Screen"
+//         onPress={() => {
+//           /* 1. Navigate to the Details route with params */
+//           navigation.navigate("Details", {
+//             itemId: 0,
+//             otherParam: "Originally passed Param",
+//           });
+//         }}
+//         color="#823"
+//       />
+//     </View>
+//   );
+// }
+// function LogoTitle() {
+//   return (
+//     <Image
+//       style={{ width: 50, height: 50 }}
+//       source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+//     />
+//   );
+// }
+// function DetailsScreen({ route, navigation }) {
+//   const { itemId, otherParam } = route.params; // Get the params.
+//   const [paramsChange, setParamButton] = useState(false);
+//   return (
+//     <View
+//       style={{
+//         flex: 1,
+//         alignItems: "center",
+//         justifyContent: "center",
+//         backgroundColor: "grey",
+//       }}
+//     >
+//       {/* <Text style={{ color: "white", fontSize: 20 }}>Second Screen</Text> */}
+//       <Text style={{ color: "white", fontSize: 20 }}>
+//         itemId: {JSON.stringify(itemId)}
+//       </Text>
+//       <Text style={{ color: "white", fontSize: 20 }}>
+//         otherParam: {JSON.stringify(otherParam)}
+//       </Text>
+//       <Button
+//         title={"Change the Params"}
+//         color="#823"
+//         onPress={() => {
+//           setParamButton(!paramsChange);
+//           navigation.setParams({
+//             itemId: paramsChange ? 100 : 0,
+//             otherParam: paramsChange
+//               ? "Changed Param"
+//               : "Originally passed Param",
+//           });
+//         }}
+//       />
+//       <Button
+//         title="Go back"
+//         color="#823"
+//         onPress={() => navigation.goBack()}
+//       />
+//     </View>
+//   );
+// }
+// const Stack = createNativeStackNavigator();
+
+// function App() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Home">
+//         <Stack.Screen
+//           name="Home"
+//           component={HomeScreen}
+//           options={{
+//             title: "Home",
+//             headerStyle: {
+//               backgroundColor: "#f4511e",
+//             },
+//             headerTintColor: "#fff",
+//             // headerTitle: (props) => <LogoTitle {...props} />,
+//             headerRight: () => (
+//               <Button
+//                 onPress={() => alert("This is a button!")}
+//                 title="Info"
+//                 color="#823"
+//               />
+//             ),
+//           }}
+//         />
+//         <Stack.Screen
+//           name="Details"
+//           component={DetailsScreen}
+//           options={{
+//             title: "Second Screen",
+//             headerStyle: {
+//               backgroundColor: "#f4511e",
+//             },
+//             headerTintColor: "#fff",
+//           }}
+//         />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+// export default App;
 
 // import * as React from "react";
 // import { Button, View, Text } from "react-native";
