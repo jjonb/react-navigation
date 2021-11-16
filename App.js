@@ -14,7 +14,7 @@ function JesseScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Image
-        style={styles.profilePic}
+        style={JesseStyles.profilePic}
         source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
       />
       <View>
@@ -31,7 +31,94 @@ function JesseScreen({ navigation }) {
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
-        style={styles.button}
+        style={JesseStyles.button}
+      >
+        <Text>Go back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+function SergutScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Image
+        style={SergutStyles.profilePic}
+        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+      />
+      <View>
+        <Text>
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+        </Text>
+      </View>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={SergutStyles.button}
+      >
+        <Text>Go back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+function LindaScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Image
+        style={LindaStyles.profilePic}
+        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+      />
+      <View style={LindaStyles.bioContainer}>
+        <Text>
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+        </Text>
+      </View>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={LindaStyles.button}
+      >
+        <Text>Go back</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+function AmelScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Image
+        style={AmelStyles.profilePic}
+        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+      />
+      <View>
+        <Text>
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+        </Text>
+      </View>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={AmelStyles.button}
       >
         <Text>Go back</Text>
       </TouchableOpacity>
@@ -51,13 +138,30 @@ function HomeScreen({ navigation }) {
       >
         <Text>Jesse</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate("Sergut");
+        }}
+      >
         <Text>Sergut</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate("Linda");
+        }}
+      >
         <Text>Linda</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate("Amel");
+        }}
+      >
         <Text>Amel</Text>
       </TouchableOpacity>
     </View>
@@ -78,6 +182,27 @@ function App() {
             title: "Jesse",
           }}
         />
+        <Stack.Screen
+          name="Sergut"
+          component={SergutScreen}
+          options={{
+            title: "Sergut",
+          }}
+        />
+        <Stack.Screen
+          name="Linda"
+          component={LindaScreen}
+          options={{
+            title: "Linda",
+          }}
+        />
+        <Stack.Screen
+          name="Amel"
+          component={AmelScreen}
+          options={{
+            title: "Amel",
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -91,9 +216,53 @@ const styles = StyleSheet.create({
     //borderRadius: 50,
   },
   profilePic: { width: 100, height: 100 },
-  bioText: {},
+  bioContainer: {
+    margin: 10,
+  },
+  bioText: {
+    margin: 10,
+  },
 });
 
+const JesseStyles = StyleSheet.create({
+  button: {
+    backgroundColor: "blue",
+    margin: 5,
+    padding: 5,
+    //borderRadius: 50,
+  },
+  profilePic: { width: 100, height: 100 },
+});
+
+const SergutStyles = StyleSheet.create({
+  button: {
+    backgroundColor: "blue",
+    margin: 5,
+    padding: 5,
+    //borderRadius: 50,
+  },
+  profilePic: { width: 100, height: 100 },
+});
+
+const LindaStyles = StyleSheet.create({
+  button: {
+    backgroundColor: "blue",
+    margin: 5,
+    padding: 5,
+    //borderRadius: 50,
+  },
+  profilePic: { width: 100, height: 100 },
+});
+
+const AmelStyles = StyleSheet.create({
+  button: {
+    backgroundColor: "blue",
+    margin: 5,
+    padding: 5,
+    //borderRadius: 50,
+  },
+  profilePic: { width: 100, height: 100 },
+});
 export default App;
 
 // function HomeScreen({ navigation }) {
