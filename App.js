@@ -39,9 +39,12 @@ function SergutScreen({ navigation }) {
       />
       <View>
         <Text>
-          Hello, my name is Sergut Tibebu, I am an Ethiopian American a mother of two children, resides in the State of Virginia,
-          self-motivated and hard-working individual.  I am React Native Apprentice at Alpha-works/Bitwise Industries 
-          currently learning how to code and develope websites. My hobbies, cooking, travelling, listening to music.
+          Hello, my name is Sergut Tibebu, I am an Ethiopian American a mother
+          of two children, resides in the State of Virginia, self-motivated and
+          hard-working individual. I am React Native Apprentice at
+          Alpha-works/Bitwise Industries currently learning how to code and
+          develope websites. My hobbies, cooking, travelling, listening to
+          music.
         </Text>
       </View>
       <TouchableOpacity
@@ -243,7 +246,6 @@ const SergutStyles = StyleSheet.create({
     margin: 5,
   },
 });
-export default App;
 
 const LindaStyles = StyleSheet.create({
   button: {
