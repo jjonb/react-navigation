@@ -109,10 +109,10 @@ function LindaScreen({ navigation }) {
       />
       <View style={LindaStyles.bioContainer}>
         <Text style={LindaStyles.bioText}>
-          Hi! My name is Linda! I live in Fresno, Ca. I have 3 children and 2
-          fur babies. I am a huge K-pop and K-drama lover. I love to eat, cook
-          and bake. One of my favorite things to do for fun is going on food
-          adventures.
+          Hi! My name is Linda! I am a devloper living in Fresno, Ca. I have 3
+          children and 2 fur babies. I am a huge K-pop and K-drama lover. I love
+          to eat, cook and bake. One of my favorite things to do for fun is
+          going on food adventures.
         </Text>
       </View>
       <TouchableOpacity
@@ -342,7 +342,7 @@ const LindaStyles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "flex-start",
-    margin: 30,
+    margin: 20,
     backgroundColor: "lavenderblush",
     borderWidth: 3,
     borderColor: "lightgrey",
