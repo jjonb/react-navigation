@@ -6,7 +6,10 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  
 } from "react-native";
+
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -81,21 +84,21 @@ function LindaScreen({ navigation }) {
 
 function AmelScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View style={{ flex: 1, alignItems:'center', justifyContent:'flex-start', margin:30, backgroundColor:'#efd595', borderWidth:3, borderColor:'#C5834C', borderRadius:15}}>
       <Image
         style={AmelStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/profile.jpg")}
       />
-      <View>
-        <Text>
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+      <View style={{marginTop:20}}>
+     
+          <View >
+          <Text style={AmelStyles.about} >About me</Text>
+          </View>
+             <Text style={{marginRight:20, marginLeft:20,alignItems:'center', lineHeight:30 ,borderStyle:'dotted'}}>
+             I'm Amel Alemu,in my current role at AlphaWorks-Bitwise industries, I am an apprentice and a web developer in the React Native environment.
+         I am originally from Ethiopia and currently reside in the Bay area. My excitement at this opportunity is overwhelming.
+
+   
         </Text>
       </View>
       <TouchableOpacity
@@ -110,8 +113,8 @@ function AmelScreen({ navigation }) {
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center",backgroundColor:'#bed9e394',borderWidth:2, borderColor:'#C5834C',margin:8,borderRadius:15 }}>
+      <Text style={{fontSize:25, marginBottom:15}}>Home Screen</Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
@@ -192,10 +195,11 @@ function App() {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "red",
+    backgroundColor: "#2b69f3ad",
     margin: 5,
-    padding: 5,
-    //borderRadius: 50,
+    padding: 8,
+
+    borderRadius: 10,
   },
   profilePic: { width: 100, height: 100 },
   bioContainer: {
@@ -237,13 +241,30 @@ const LindaStyles = StyleSheet.create({
 });
 
 const AmelStyles = StyleSheet.create({
-  button: {
-    backgroundColor: "blue",
-    margin: 5,
-    padding: 5,
-    //borderRadius: 50,
+  container:{
+
   },
-  profilePic: { width: 100, height: 100 },
+  button: {
+    backgroundColor: "coral",
+    margin: 8,
+    padding: 10,
+    borderRadius: 50,
+    marginTop:20,
+   
+  },
+  profilePic: { width: 100, height: 100,
+  borderRadius:100,
+  flexDirection:'column',
+  justifyContent:'flex-start',
+  marginTop:25
+  
+  },
+  about:{
+   
+    fontSize:20,
+    textAlign:'center',
+    margin:5
+  },
 });
 export default App;
 
