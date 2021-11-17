@@ -6,9 +6,7 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  
 } from "react-native";
-
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -18,10 +16,16 @@ function JesseScreen({ navigation }) {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Image
         style={JesseStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/jesse.jpg")}
       />
       <View>
-        <Text>alaal</Text>
+        <Text>
+          My name is Jesse Bellido. Born and raised in San Jose, CA. Currently,
+          I'm a react native apprentice for AlphaWorks. My favorite thing to do
+          outside of work is to game or to take walks around my local lake. I'm
+          very excited to be here and to learn and grow with my team right
+          beside me.
+        </Text>
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
@@ -84,21 +88,39 @@ function LindaScreen({ navigation }) {
 
 function AmelScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems:'center', justifyContent:'flex-start', margin:30, backgroundColor:'#efd595', borderWidth:3, borderColor:'#C5834C', borderRadius:15}}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "flex-start",
+        margin: 30,
+        backgroundColor: "#efd595",
+        borderWidth: 3,
+        borderColor: "#C5834C",
+        borderRadius: 15,
+      }}
+    >
       <Image
         style={AmelStyles.profilePic}
         source={require("./Images/profile.jpg")}
       />
-      <View style={{marginTop:20}}>
-     
-          <View >
-          <Text style={AmelStyles.about} >About me</Text>
-          </View>
-             <Text style={{marginRight:20, marginLeft:20,alignItems:'center', lineHeight:30 ,borderStyle:'dotted'}}>
-             I'm Amel Alemu,in my current role at AlphaWorks-Bitwise industries, I am an apprentice and a web developer in the React Native environment.
-         I am originally from Ethiopia and currently reside in the Bay area. My excitement at this opportunity is overwhelming.
-
-   
+      <View style={{ marginTop: 20 }}>
+        <View>
+          <Text style={AmelStyles.about}>About me</Text>
+        </View>
+        <Text
+          style={{
+            marginRight: 20,
+            marginLeft: 20,
+            alignItems: "center",
+            lineHeight: 30,
+            borderStyle: "dotted",
+          }}
+        >
+          I'm Amel Alemu,in my current role at AlphaWorks-Bitwise industries, I
+          am an apprentice and a web developer in the React Native environment.
+          I am originally from Ethiopia and currently reside in the Bay area. My
+          excitement at this opportunity is overwhelming.
         </Text>
       </View>
       <TouchableOpacity
@@ -113,8 +135,19 @@ function AmelScreen({ navigation }) {
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center",backgroundColor:'#bed9e394',borderWidth:2, borderColor:'#C5834C',margin:8,borderRadius:15 }}>
-      <Text style={{fontSize:25, marginBottom:15}}>Home Screen</Text>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#bed9e394",
+        borderWidth: 2,
+        borderColor: "#C5834C",
+        margin: 8,
+        borderRadius: 15,
+      }}
+    >
+      <Text style={{ fontSize: 25, marginBottom: 15 }}>Meet our team!</Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
@@ -241,29 +274,26 @@ const LindaStyles = StyleSheet.create({
 });
 
 const AmelStyles = StyleSheet.create({
-  container:{
-
-  },
+  container: {},
   button: {
     backgroundColor: "coral",
     margin: 8,
     padding: 10,
     borderRadius: 50,
-    marginTop:20,
-   
+    marginTop: 20,
   },
-  profilePic: { width: 100, height: 100,
-  borderRadius:100,
-  flexDirection:'column',
-  justifyContent:'flex-start',
-  marginTop:25
-  
+  profilePic: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    marginTop: 25,
   },
-  about:{
-   
-    fontSize:20,
-    textAlign:'center',
-    margin:5
+  about: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 5,
   },
 });
 export default App;
