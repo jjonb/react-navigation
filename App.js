@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Linking,
 } from "react-native";
+import { Ionicons, AntDesign } from "@expo/vector-icons";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -15,13 +16,28 @@ import { Ionicons } from "@expo/vector-icons";
 
 function JesseScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "beige",
+      }}
+    >
       <Image
         style={JesseStyles.profilePic}
         source={require("./Images/jesse.jpg")}
       />
-      <View>
-        <Text>
+      <View style={{}}>
+        <Text
+          style={{
+            fontSize: 20,
+            margin: 20,
+            fontWeight: "bold",
+            color: "purple",
+            lineHeight: 30,
+          }}
+        >
           My name is Jesse Bellido. Born and raised in San Jose, CA. Currently,
           I'm a react native apprentice for AlphaWorks. My favorite thing to do
           outside of work is to game or to take walks around my local lake. I'm
@@ -29,11 +45,22 @@ function JesseScreen({ navigation }) {
           beside me.
         </Text>
       </View>
+      <View style={{ flexDirection: "row", position: "absolute", bottom: 50 }}>
+        <AntDesign name="linkedin-square" size={30} color="blue" />
+
+        <AntDesign name="facebook-square" size={30} color="blue" />
+
+        <AntDesign name="instagram" size={30} color="black" />
+
+        <AntDesign name="twitter" size={30} color="blue" />
+      </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
         style={JesseStyles.button}
       >
-        <Text>Go back</Text>
+        <Text style={{ color: "white", fontSize: 15, fontWeight: "bold" }}>
+          Go back
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -48,8 +75,12 @@ function SergutScreen({ navigation }) {
       />
       <View>
         <Text>
-          Hello this is Sergut, a React Native Developer Apprentice at
-          Alphaworks Tech. I like to code and on my free time I like to cook.
+          Hello, my name is Sergut Tibebu, I am an Ethiopian American a mother
+          of two children, resides in the State of Virginia, self-motivated and
+          hard-working individual. I am React Native Apprentice at
+          Alpha-works/Bitwise Industries currently learning how to code and
+          develope websites. My hobbies, cooking, travelling, listening to
+          music.
         </Text>
       </View>
       <TouchableOpacity
@@ -260,22 +291,42 @@ const styles = StyleSheet.create({
 
 const JesseStyles = StyleSheet.create({
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "orange",
     margin: 5,
     padding: 5,
-    //borderRadius: 50,
+    borderRadius: 10,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    top: 40,
+    position: "absolute",
+  },
 });
 
 const SergutStyles = StyleSheet.create({
+  container: {},
   button: {
-    backgroundColor: "blue",
-    margin: 5,
-    padding: 5,
-    //borderRadius: 50,
+    backgroundColor: "pink",
+    margin: 8,
+    padding: 10,
+    borderRadius: 40,
+    marginTop: 20,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    marginTop: 20,
+  },
+  about: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 5,
+  },
 });
 
 const LindaStyles = StyleSheet.create({
