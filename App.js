@@ -66,13 +66,20 @@ function JesseScreen({ navigation }) {
 
 function SergutScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "skyblue",
+      }}
+    >
       <Image
         style={SergutStyles.profilePic}
         source={require("./Images/sergutPic.jpg")}
       />
       <View>
-        <Text>
+        <Text style={SergutStyles.bio}>
           Hello, my name is Sergut Tibebu, I am an Ethiopian American a mother
           of two children, resides in the State of Virginia, self-motivated and
           hard-working individual. I am React Native Apprentice at
@@ -311,12 +318,13 @@ const SergutStyles = StyleSheet.create({
     borderRadius: 100,
     flexDirection: "column",
     justifyContent: "flex-start",
-    marginTop: 20,
+    marginTop: 25,
   },
-  about: {
-    fontSize: 20,
+  bio: {
+    fontSize: 15,
     textAlign: "center",
     margin: 5,
+    color: "black",
   },
 });
 
