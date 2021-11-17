@@ -245,12 +245,17 @@ const styles = StyleSheet.create({
 
 const JesseStyles = StyleSheet.create({
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "orange",
     margin: 5,
     padding: 5,
     //borderRadius: 50,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    justifyContent: "flex-start",
+  },
 });
 
 const SergutStyles = StyleSheet.create({
