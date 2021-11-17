@@ -73,19 +73,10 @@ function LindaScreen({ navigation }) {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Image
         style={LindaStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/lindaPic.jpeg")}
       />
       <View style={LindaStyles.bioContainer}>
-        <Text>
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-        </Text>
+        <Text style={LindaStyles.bioText}>Hi! My name is Linda! </Text>
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
@@ -246,12 +237,22 @@ const SergutStyles = StyleSheet.create({
 
 const LindaStyles = StyleSheet.create({
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "#c8c7c6",
     margin: 5,
     padding: 5,
-    //borderRadius: 50,
+    borderRadius: 10,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 100,
+    height: 100,
+  },
+  bioContainer: {
+    margin: 10,
+  },
+  bioText: {
+    margin: 10,
+    fontSize: 18,
+  },
 });
 
 const AmelStyles = StyleSheet.create({
