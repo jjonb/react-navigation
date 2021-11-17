@@ -7,25 +7,47 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import { Ionicons, AntDesign } from "@expo/vector-icons";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 function JesseScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "beige",
+      }}
+    >
       <Image
         style={JesseStyles.profilePic}
         source={require("./Images/jesse.jpg")}
       />
-      <View>
-        <Text>
+      <View style={{}}>
+        <Text style={{ fontSize: 20, margin: 20 }}>
           My name is Jesse Bellido. Born and raised in San Jose, CA. Currently,
           I'm a react native apprentice for AlphaWorks. My favorite thing to do
           outside of work is to game or to take walks around my local lake. I'm
           very excited to be here and to learn and grow with my team right
           beside me.
         </Text>
+      </View>
+      <View styles={{ flexDirection: "row" }}>
+        <View>
+          <AntDesign name="linkedin-square" size={24} color="blue" />
+        </View>
+        <View>
+          <AntDesign name="facebook-square" size={24} color="blue" />
+        </View>
+        <View>
+          <AntDesign name="instagram" size={24} color="black" />
+        </View>
+        <View>
+          <AntDesign name="twitter" size={24} color="blue" />
+        </View>
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
@@ -254,13 +276,14 @@ const JesseStyles = StyleSheet.create({
     backgroundColor: "orange",
     margin: 5,
     padding: 5,
+    position: "absolute",
     //borderRadius: 50,
   },
   profilePic: {
     width: 100,
     height: 100,
     borderRadius: 50,
-    justifyContent: "flex-start",
+    top: 20,
   },
 });
 
