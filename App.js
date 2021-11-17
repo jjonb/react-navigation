@@ -7,24 +7,58 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import { Ionicons, AntDesign } from "@expo/vector-icons";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 function JesseScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "beige",
+      }}
+    >
       <Image
         style={JesseStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/jesse.jpg")}
       />
-      <View>
-        <Text>alaal</Text>
+      <View style={{}}>
+        <Text
+          style={{
+            fontSize: 20,
+            margin: 20,
+            fontWeight: "bold",
+            color: "purple",
+            lineHeight: 30,
+          }}
+        >
+          My name is Jesse Bellido. Born and raised in San Jose, CA. Currently,
+          I'm a react native apprentice for AlphaWorks. My favorite thing to do
+          outside of work is to game or to take walks around my local lake. I'm
+          very excited to be here and to learn and grow with my team right
+          beside me.
+        </Text>
+      </View>
+      <View style={{ flexDirection: "row", position: "absolute", bottom: 50 }}>
+        <AntDesign name="linkedin-square" size={30} color="blue" />
+
+        <AntDesign name="facebook-square" size={30} color="blue" />
+
+        <AntDesign name="instagram" size={30} color="black" />
+
+        <AntDesign name="twitter" size={30} color="blue" />
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
         style={JesseStyles.button}
       >
-        <Text>Go back</Text>
+        <Text style={{ color: "white", fontSize: 15, fontWeight: "bold" }}>
+          Go back
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -59,28 +93,31 @@ function SergutScreen({ navigation }) {
 
 function LindaScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#ddbea9",
+      }}
+    >
       <Image
         style={LindaStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/lindaPic.jpeg")}
       />
       <View style={LindaStyles.bioContainer}>
-        <Text>
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+        <Text style={LindaStyles.bioText}>
+          Hi! My name is Linda! I live in Fresno, Ca. I have 3 children and 2
+          fur babies. I am a huge K-pop and K-drama lover. I love to eat, cook
+          and bake. One of my favorite things to do for fun is going on food
+          adventures.
         </Text>
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
         style={LindaStyles.button}
       >
-        <Text>Go back</Text>
+        <Text style={LindaStyles.btn}>Go back</Text>
       </TouchableOpacity>
     </View>
   );
@@ -88,21 +125,39 @@ function LindaScreen({ navigation }) {
 
 function AmelScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "flex-start",
+        margin: 30,
+        backgroundColor: "#efd595",
+        borderWidth: 3,
+        borderColor: "#C5834C",
+        borderRadius: 15,
+      }}
+    >
       <Image
         style={AmelStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/profile.jpg")}
       />
-      <View>
-        <Text>
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+      <View style={{ marginTop: 20 }}>
+        <View>
+          <Text style={AmelStyles.about}>About me</Text>
+        </View>
+        <Text
+          style={{
+            marginRight: 20,
+            marginLeft: 20,
+            alignItems: "center",
+            lineHeight: 30,
+            borderStyle: "dotted",
+          }}
+        >
+          I'm Amel Alemu,in my current role at AlphaWorks-Bitwise industries, I
+          am an apprentice and a web developer in the React Native environment.
+          I am originally from Ethiopia and currently reside in the Bay area. My
+          excitement at this opportunity is overwhelming.
         </Text>
       </View>
       <TouchableOpacity
@@ -117,8 +172,19 @@ function AmelScreen({ navigation }) {
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#bed9e394",
+        borderWidth: 2,
+        borderColor: "#C5834C",
+        margin: 8,
+        borderRadius: 15,
+      }}
+    >
+      <Text style={{ fontSize: 25, marginBottom: 15 }}>Meet our team!</Text>
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
@@ -199,10 +265,11 @@ function App() {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "red",
+    backgroundColor: "#2b69f3ad",
     margin: 5,
-    padding: 5,
-    //borderRadius: 50,
+    padding: 8,
+
+    borderRadius: 10,
   },
   profilePic: { width: 100, height: 100 },
   bioContainer: {
@@ -215,12 +282,18 @@ const styles = StyleSheet.create({
 
 const JesseStyles = StyleSheet.create({
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "orange",
     margin: 5,
     padding: 5,
-    //borderRadius: 50,
+    borderRadius: 10,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    top: 40,
+    position: "absolute",
+  },
 });
 
 const SergutStyles = StyleSheet.create({
@@ -249,22 +322,48 @@ const SergutStyles = StyleSheet.create({
 
 const LindaStyles = StyleSheet.create({
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "#d4c7b0",
     margin: 5,
     padding: 5,
-    //borderRadius: 50,
+    borderRadius: 10,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+  },
+  bioContainer: {
+    margin: 10,
+  },
+  bioText: {
+    margin: 10,
+    fontSize: 18,
+    textAlign: "center",
+  },
 });
 
 const AmelStyles = StyleSheet.create({
+  container: {},
   button: {
-    backgroundColor: "blue",
-    margin: 5,
-    padding: 5,
-    //borderRadius: 50,
+    backgroundColor: "coral",
+    margin: 8,
+    padding: 10,
+    borderRadius: 50,
+    marginTop: 20,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    marginTop: 25,
+  },
+  about: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 5,
+  },
 });
 export default App;
 
