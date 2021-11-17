@@ -35,10 +35,13 @@ function SergutScreen({ navigation }) {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Image
         style={SergutStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/sergutPic.jpg")}
       />
       <View>
-        <Text>Sergut</Text>
+        <Text>
+          Hello this is Sergut, a React Native Developer Apprentice at
+          Alphaworks Tech. I like to code and on my free time I like to cook.
+        </Text>
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
