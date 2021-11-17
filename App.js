@@ -6,10 +6,10 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  Linking,
   TouchableHighlight,
 } from "react-native";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -95,14 +95,7 @@ function SergutScreen({ navigation }) {
 
 function LindaScreen({ navigation }) {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#ddbea9",
-      }}
-    >
+    <View style={LindaStyles.profileContainer}>
       <Image
         style={LindaStyles.profilePic}
         source={require("./Images/lindaPic.jpeg")}
@@ -119,8 +112,22 @@ function LindaScreen({ navigation }) {
         onPress={() => navigation.goBack()}
         style={LindaStyles.button}
       >
-        <Text style={LindaStyles.btn}>Go back</Text>
+        <Text>Go back</Text>
       </TouchableOpacity>
+      <View style={LindaStyles.socialIcons}>
+        <Ionicons name="logo-facebook" size={32} color="#2867b2" />
+        <TouchableOpacity
+          onPress={() => {
+            Linking.openURL(
+              "https://www.linkedin.com/in/linda-k-westphal-1aba9a1b5?trk=public_profile_samename-profile"
+            );
+          }}
+        >
+          <Ionicons name="logo-linkedin" size={32} color="#2867b2" />
+        </TouchableOpacity>
+        <Ionicons name="logo-instagram" size={32} color="#2867b2" />
+        <Ionicons name="logo-twitter" size={32} color="#2867b2" />
+      </View>
     </View>
   );
 }
@@ -323,24 +330,45 @@ const SergutStyles = StyleSheet.create({
 });
 
 const LindaStyles = StyleSheet.create({
+  profileContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "flex-start",
+    margin: 30,
+    backgroundColor: "lavenderblush",
+    borderWidth: 3,
+    borderColor: "lightgrey",
+    borderRadius: 15,
+  },
   button: {
-    backgroundColor: "#d4c7b0",
-    margin: 5,
-    padding: 5,
-    borderRadius: 10,
+    backgroundColor: "lightgrey",
+    margin: 8,
+    padding: 10,
+    borderRadius: 50,
+    marginTop: 20,
   },
   profilePic: {
     width: 100,
     height: 100,
     borderRadius: 100,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    marginTop: 25,
+    borderWidth: 0.5,
+    borderColor: "lightgrey",
   },
   bioContainer: {
     margin: 10,
   },
   bioText: {
     margin: 10,
-    fontSize: 18,
+    fontSize: 20,
     textAlign: "center",
+    fontFamily: "normal",
+  },
+  socialIcons: {
+    flexDirection: "row",
+    marginTop: 50,
   },
 });
 
