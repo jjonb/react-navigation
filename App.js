@@ -9,10 +9,8 @@ import {
   Linking,
 } from "react-native";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Ionicons } from "@expo/vector-icons";
 
 function JesseScreen({ navigation }) {
   return (
