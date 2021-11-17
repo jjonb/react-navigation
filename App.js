@@ -62,28 +62,31 @@ function SergutScreen({ navigation }) {
 
 function LindaScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#ddbea9",
+      }}
+    >
       <Image
         style={LindaStyles.profilePic}
-        source={{ uri: "https://wallpaperaccess.com/full/187161.jpg" }}
+        source={require("./Images/lindaPic.jpeg")}
       />
       <View style={LindaStyles.bioContainer}>
-        <Text>
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
-          JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk JDdfjksflk
+        <Text style={LindaStyles.bioText}>
+          Hi! My name is Linda! I live in Fresno, Ca. I have 3 children and 2
+          fur babies. I am a huge K-pop and K-drama lover. I love to eat, cook
+          and bake. One of my favorite things to do for fun is going on food
+          adventures.
         </Text>
       </View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
         style={LindaStyles.button}
       >
-        <Text>Go back</Text>
+        <Text style={LindaStyles.btn}>Go back</Text>
       </TouchableOpacity>
     </View>
   );
@@ -268,12 +271,24 @@ const SergutStyles = StyleSheet.create({
 
 const LindaStyles = StyleSheet.create({
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "#d4c7b0",
     margin: 5,
     padding: 5,
-    //borderRadius: 50,
+    borderRadius: 10,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+  },
+  bioContainer: {
+    margin: 10,
+  },
+  bioText: {
+    margin: 10,
+    fontSize: 18,
+    textAlign: "center",
+  },
 });
 
 const AmelStyles = StyleSheet.create({
