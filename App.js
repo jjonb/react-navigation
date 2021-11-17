@@ -46,8 +46,9 @@ function SergutScreen({ navigation }) {
       />
       <View>
         <Text>
-          Hello this is Sergut, a React Native Developer Apprentice at
-          Alphaworks Tech. I like to code and on my free time I like to cook.
+          Hello, my name is Sergut Tibebu, I am an Ethiopian American a mother of two children, resides in the State of Virginia,
+          self-motivated and hard-working individual.  I am React Native Apprentice at Alpha-works/Bitwise Industries 
+          currently learning how to code and develope websites. My hobbies, cooking, travelling, listening to music.
         </Text>
       </View>
       <TouchableOpacity
@@ -260,14 +261,29 @@ const JesseStyles = StyleSheet.create({
 });
 
 const SergutStyles = StyleSheet.create({
+  container: {},
   button: {
-    backgroundColor: "blue",
-    margin: 5,
-    padding: 5,
-    //borderRadius: 50,
+    backgroundColor: "pink",
+    margin: 8,
+    padding: 10,
+    borderRadius: 40,
+    marginTop: 20,
   },
-  profilePic: { width: 100, height: 100 },
+  profilePic: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    marginTop: 20,
+  },
+  about: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 5,
+  },
 });
+export default App;
 
 const LindaStyles = StyleSheet.create({
   button: {
