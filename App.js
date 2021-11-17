@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Linking,
+  TouchableHighlight,
 } from "react-native";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
@@ -34,6 +35,7 @@ function JesseScreen({ navigation }) {
             fontWeight: "bold",
             color: "purple",
             lineHeight: 30,
+            marginTop: 70,
           }}
         >
           My name is Jesse Bellido. Born and raised in San Jose, CA. Currently,
