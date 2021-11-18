@@ -73,7 +73,7 @@ function SergutScreen({ navigation }) {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "skyblue",
+        backgroundColor: "#D9E3DA",
       }}
     >
       <Image
@@ -81,12 +81,22 @@ function SergutScreen({ navigation }) {
         source={require("./Images/sergutPic.jpg")}
       />
       <View>
-        <Text style={SergutStyles.bio}>
-          Hello, my name is Sergut Tibebu, I am an Ethiopian American a mother
-          of two children, resides in the State of Virginia, self-motivated and
-          hard-working individual. I am React Native Apprentice at
-          Alpha-works/Bitwise Industries currently learning how to code and
-          develope websites. My hobbies, cooking, travelling, listening to
+        <Text
+          style={{
+            marginRight: 20,
+            marginLeft: 20,
+            alignItems: "center",
+            lineHeight: 25,
+            borderStyle: "dotted",
+          }}
+        >
+          Hello, my name is Sergut Tibebu, I am an Ethiopian American and a
+          mother of two children, resides in the State of Virginia,
+          self-motivated, supportive and hard-working individual. Currently, I
+          am a React Native Apprentice at Alpha works, Bitwise Industries
+          learning how to code and develope websites. I like spending time with
+          my family and volunteering in non-profit organizations to give back to
+          my community. My hobbies are cooking, travelling and listening to
           music.
         </Text>
       </View>
@@ -315,19 +325,19 @@ const JesseStyles = StyleSheet.create({
 const SergutStyles = StyleSheet.create({
   container: {},
   button: {
-    backgroundColor: "pink",
-    margin: 8,
-    padding: 10,
+    backgroundColor: "#0e6b0e",
+    margin: 5,
+    padding: 5,
     borderRadius: 40,
     marginTop: 20,
   },
   profilePic: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
     borderRadius: 100,
     flexDirection: "column",
     justifyContent: "flex-start",
-    marginTop: 25,
+    marginTop: 20,
   },
   bio: {
     fontSize: 15,
